@@ -1,14 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>作业</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人主页 | 大一新生</title>
+    <style>
+        /* 全局重置 + 柔和风格 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: linear-gradient(145deg, #f6f9fc 0%, #e9f2f9 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .card {
+            max-width: 640px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 48px;
+            padding: 48px 40px;
+            box-shadow: 0 20px 48px rgba(0, 20, 40, 0.12), 0 6px 16px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: transform 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+            user-select: none;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0b1e33;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-top: 4px;
+            margin-bottom: 18px;
+            letter-spacing: 0.3px;
+        }
+
+        .info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 24px 0 28px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 16px;
+            color: #1e2f44;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 16px;
+            transition: background 0.15s;
+        }
+
+        .info-item:hover {
+            background: rgba(37, 99, 235, 0.06);
+        }
+
+        .info-item .emoji {
+            font-size: 20px;
+            width: 32px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .info-item a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .info-item a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        .desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #1e3a5f;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 18px 20px;
+            border-radius: 20px;
+            border-left: 4px solid #2563eb;
+            margin: 8px 0 16px;
+        }
+
+        .footer-note {
+            font-size: 14px;
+            color: #5b6f88;
+            text-align: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+            margin-top: 8px;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            .card {
+                padding: 32px 20px;
+                border-radius: 32px;
+            }
+            .avatar {
+                width: 72px;
+                height: 72px;
+                font-size: 30px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>你好，我是[戴旭]</h1>
-    <p>专业：[微电子]</p >
-    <p>班级：[3班]</p >
-    <p>个人电话：[13528845216]</p >
-    <p>贪吃蛇游戏：[https://daizuzong.github.io/myfirstassessment/assessment/snake2.0.html]</p >
+    <div class="card">
+        <!-- 头像（取姓名首字母） -->
+        <div class="avatar">👤</div>
+
+        <!-- 姓名 & 身份标识 -->
+        <h1>你好，我是 <span id="nameDisplay">[你的名字]</span></h1>
+        <span class="badge">🚀 大一 · 计科新生</span>
+
+        <!-- 个人信息 -->
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="emoji">📚</span>
+                <span><strong>专业</strong> · <span id="majorDisplay">计算机科学与技术</span></span>
+            </div>
+            <div class="info-item">
+                <span class="emoji">🎯</span>
+                <span><strong>兴趣</strong> · <span id="interestDisplay">编程 · 篮球 · 摄影</span></span>
+            </div>
+            <div class="info-item">
+                <span class="emoji">📧</span>
+                <span><strong>邮箱</strong> · <a href="mailto:your.email@example.com" id="emailDisplay">your.email@example.com</a></span>
+            </div>
+            <div class="info-item">
+                <span class="emoji">🐙</span>
+                <span><strong>GitHub</strong> · <a href="https://github.com/你的用户名" target="_blank" id="githubDisplay">github.com/你的用户名</a></span>
+            </div>
+        </div>
+
+        <!-- 一句话简介 -->
+        <div class="desc">
+            ✨ 保持好奇，保持动手。<br />
+            从零开始写代码，让想法变成现实。
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer-note">
+            🌱 持续建设中 · 2026
+        </div>
+    </div>
+
+    <script>
+        // 你可以在这里批量修改个人信息，不用翻 HTML 结构
+        const user = {
+            name: '戴旭',                // ← 改成你的名字
+            major: '微电子科学与工程',    // ← 你的专业
+            interest: '烘焙，乐器',
+            email: '2815966502@qq.com',  // ← 你的邮箱
+            github: 'daizong'          // ← 你的 GitHub 用户名
+        };
+
+        document.getElementById('nameDisplay').textContent = user.name;
+        document.getElementById('majorDisplay').textContent = user.major;
+        document.getElementById('interestDisplay').textContent = user.interest;
+        document.getElementById('emailDisplay').textContent = user.email;
+        document.getElementById('emailDisplay').href = 'mailto:' + user.email;
+        document.getElementById('githubDisplay').textContent = 'github.com/' + user.github;
+        document.getElementById('githubDisplay').href = 'https://github.com/' + user.github;
+    </script>
 </body>
 </html>
