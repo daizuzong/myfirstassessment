@@ -37,7 +37,8 @@
 | gm (mS) | 8.66 | 8.66 | 0.00 | sqrt(2*K*I_D) |
 | Av (V/V) | -1.7 | -1.7050 | 0.00 | 反相 |
 
-- 低通滤波器:https://daizuzong.github.io/低通滤波器/手算.png(1).png
+- 低通滤波器:<img width="6144" height="8192" alt="手算 png(1)" src="https://github.com/user-attachments/assets/b3c79523-9f18-436f-ab30-390ab12fd506" />
+
 - 以下是低通滤波器对比表:
 
 | 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
