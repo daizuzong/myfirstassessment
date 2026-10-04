@@ -26,7 +26,17 @@
 测试结果表明AI策略稳定可靠，达到了‘连续吃15个食物不死’的硬指标要求。”
 -  对于戴维南定律的验证，给ai提示词:“请帮我写个基于PySpice的二端网络，其中两个电源均与一个R=0.2Ω的电子串联，其中一个电源为7V，另一个为6.2V。同时他们并联与一个负载电阻R3=3.2Ω。并给出R3支路的电流”
 验证思路:通过戴维南定律计算等效电源和电阻后通过负载的电流大小，再用pyspice模拟原电路的负载电流。最后发现结果一致
-- NMOS:
+- 以下是模拟结果与手算:<img width="2009" height="738" alt="two_source_network" src="https://github.com/user-attachments/assets/26d8ccb8-ebd4-41b3-bcbd-a61831e5ac42" />
+- 图二:<img width="3072" height="4096" alt="手算" src="https://github.com/user-attachments/assets/9611cb34-7b5e-45d3-a64f-3448e3344d39" />
+
+| 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
+|------|--------|--------|----------|------|
+| U | 6.6 | 6.6 | 0.00 | 无 |
+| I | 2.0 | 2.0 | 0.01 | 无 |
+
+- NMOS:<img width="1235" height="1300" alt="nmos_cs_amp_waveform" src="https://github.com/user-attachments/assets/0e60c691-10d4-4a8d-8d8d-3068f6b1e18d" />
+- 图二:<img width="1235" height="598" alt="nmos_cs_amp_bode" src="https://github.com/user-attachments/assets/15b1bc9d-c82f-428d-a2fc-b5929a128abe" />
+-手算:
 - 以下是放大电路的对比表：
 
 | 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
@@ -38,8 +48,7 @@
 | Av (V/V) | -1.7 | -1.7050 | 0.00 | 反相 |
 
 - 低通滤波器:<img width="6144" height="8192" alt="手算 png(1)" src="https://github.com/user-attachments/assets/b3c79523-9f18-436f-ab30-390ab12fd506" />
-![Uploading rc_lowpass_magnitude.png…]()
-
+- 图像:<img width="1482" height="880" alt="rc_lowpass_magnitude" src="https://github.com/user-attachments/assets/d7770a7f-d8c1-48ae-ab08-9d0179498de3" />
 
 - 以下是低通滤波器对比表:
 
