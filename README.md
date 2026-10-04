@@ -32,7 +32,7 @@
 | 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
 |------|--------|--------|----------|------|
 | U | 6.6 | 6.6 | 0.00 | 无 |
-| I | 2.0 | 2.0 | 0.01 | 无 |
+| I | 2.0 | 2.0 | 0.00 | 无 |
 
 - NMOS:<img width="1235" height="1300" alt="nmos_cs_amp_waveform" src="https://github.com/user-attachments/assets/0e60c691-10d4-4a8d-8d8d-3068f6b1e18d" />
 - 图二:<img width="1235" height="598" alt="nmos_cs_amp_bode" src="https://github.com/user-attachments/assets/15b1bc9d-c82f-428d-a2fc-b5929a128abe" />
