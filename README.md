@@ -38,6 +38,8 @@
 | Av (V/V) | -1.7 | -1.7050 | 0.00 | 反相 |
 
 - 低通滤波器:<img width="6144" height="8192" alt="手算 png(1)" src="https://github.com/user-attachments/assets/b3c79523-9f18-436f-ab30-390ab12fd506" />
+![Uploading rc_lowpass_magnitude.png…]()
+
 
 - 以下是低通滤波器对比表:
 
