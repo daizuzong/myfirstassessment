@@ -36,7 +36,9 @@
 
 - NMOS:<img width="1235" height="1300" alt="nmos_cs_amp_waveform" src="https://github.com/user-attachments/assets/0e60c691-10d4-4a8d-8d8d-3068f6b1e18d" />
 - 图二:<img width="1235" height="598" alt="nmos_cs_amp_bode" src="https://github.com/user-attachments/assets/15b1bc9d-c82f-428d-a2fc-b5929a128abe" />
--手算:
+-手算（第一次错误结果）:<img width="4096" height="3072" alt="微信图片_20261009150015_35_2" src="https://github.com/user-attachments/assets/91c68350-d290-4cf4-84a4-9f3c809f4688" />
+-第二次修正结果:<img width="3072" height="4096" alt="微信图片_20261009151753_36_2" src="https://github.com/user-attachments/assets/a549e93b-32fc-4e5a-86b2-b4333b9a4db4" />
+
 - 以下是放大电路的对比表：
 
 | 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
@@ -44,8 +46,8 @@
 | V_GS (V) | 2.00 | 2.00 | 0.00 | 分压固定 |
 | I_D (mA) | 4.3 | 4.331 | 0.01 | 饱和区(V_GS>V_th 且 V_DS>V_ov) |
 | V_DS (V) | 4.1 | 4.133858 | 0.01 | > V_GS-Vth |
-| gm (mS) | 8.66 | 8.66 | 0.00 | sqrt(2*K*I_D) |
-| Av (V/V) | -1.7 | -1.7050 | 0.00 | 反相 |
+| gm (mS) | 0.866 | 0.866 | 0.00 | sqrt(2*K*I_D) |
+| Av (V/V) | -1.703 | -1.7050 | 0.00 | 反相 |
 
 - 低通滤波器:<img width="6144" height="8192" alt="手算 png(1)" src="https://github.com/user-attachments/assets/b3c79523-9f18-436f-ab30-390ab12fd506" />
 - 图像:<img width="1482" height="880" alt="rc_lowpass_magnitude" src="https://github.com/user-attachments/assets/d7770a7f-d8c1-48ae-ab08-9d0179498de3" />
