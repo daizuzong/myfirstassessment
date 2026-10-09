@@ -50,7 +50,7 @@
 - 图二:<img width="1235" height="598" alt="nmos_cs_amp_bode" src="https://github.com/user-attachments/assets/15b1bc9d-c82f-428d-a2fc-b5929a128abe" />
 -手算（第一次错误结果）:<img width="4096" height="3072" alt="微信图片_20261009150015_35_2" src="https://github.com/user-attachments/assets/91c68350-d290-4cf4-84a4-9f3c809f4688" />
 -第二次修正结果:<img width="3072" height="4096" alt="微信图片_20261009151753_36_2" src="https://github.com/user-attachments/assets/a549e93b-32fc-4e5a-86b2-b4333b9a4db4" />
-
+-以下是手绘图:
 - 以下是放大电路的对比表：
 
 | 参数 | 理论值 | 仿真值 | 误差 (%) | 备注 |
@@ -61,3 +61,4 @@
 | gm (mS) | 0.866 | 0.866 | 0.00 | sqrt(2*K*I_D) |
 | Av (V/V) | -1.703 | -1.7050 | 0.00 | 反相 |
 
+- 在整个仿真过程中，VS code遇到了无法识别pyspice和ngspice的问题，AI指引手动搭建环境均无效，之后通过重装每一个插件后发现是python的版本问题.
